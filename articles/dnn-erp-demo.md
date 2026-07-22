@@ -26,8 +26,8 @@ INSERT-only, fail-soft. The *Vendor* form repeats the pattern into `dbo.Vendors`
 
 ## 3. Transaction form — where it meets
 
-Every reference dropdown reads the ERP database live — the Store list (*Berlin Store, Hanoi
-Flagship, Singapore Central*) IS `dbo.Stores`, maintained by the Store form; Vendors likewise.
+Every reference dropdown reads the ERP database live — the Store list (*Berlin Store, London
+Central, Singapore Hub*) IS `dbo.Stores`, maintained by the Store form; Vendors likewise.
 Add amount, date, a **vendor receipt** upload — and the subtitle keeps the promise: *"An
 invoice is issued automatically."*
 
@@ -52,8 +52,8 @@ query on the ERP connection: summary counts, the Stores/Vendors/Transactions lis
 
 ![DNN ERP Reports page — eight Data Repeaters over live SQL: summary counts, lists, GROUP BY reports and invoice status](../images/dnn-erp-reports-dashboard.png)
 
-Worth noticing: the data is **live** (TXN-8's 25,000,000 VND rolls up into the Vietnam and VND
-summary rows in the same render); every transaction shows its uploaded receipt file; all four
+Worth noticing: the data is **live** (each transaction's amount rolls up into its country-wise and
+currency-wise summary rows in the same render); every transaction shows its uploaded receipt file; all four
 transactions have a matching `ISSUED` invoice; each widget prints its row count + query time,
 and queries run server-side, SELECT-only, on the named connection.
 

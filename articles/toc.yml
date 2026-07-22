@@ -1,18 +1,7 @@
-- name: Getting Started on DNN
+- name: Using MegaForm on DNN
   items:
     - name: From a Blank Page to a Working Form
       href: dnn-add-to-page.md
-    - name: Module Setup — Dashboard, Windowed & Full Screen
-      href: dnn-module-setup.md
-    - name: Read & Write a SQL Table
-      href: dnn-sql-table.md
-    - name: Cascade-SQL Dropdowns
-      href: cascade-sql-dropdowns.md
-    - name: Display Submissions with Razor
-      href: dnn-razor-display-submissions.md
-
-- name: Building Forms on DNN
-  items:
     - name: Creating Forms
       href: dnn-creating-forms.md
     - name: Form Templates
@@ -27,9 +16,8 @@
       href: dnn-drag-drop-layout.md
     - name: Module Settings & Theme
       href: dnn-settings-theme.md
-
-- name: Submissions & Workflow
-  items:
+    - name: Theme Compatibility
+      href: dnn-theme-compatibility.md
     - name: After Submission
       href: dnn-after-submission.md
     - name: Submissions & My Inbox
@@ -42,11 +30,8 @@
       href: dnn-workflow-approvals.md
     - name: Workflow Library
       href: dnn-workflow-library.md
-    - name: End-to-End Demo — ERP Flow
+    - name: "End-to-End Demo: ERP Flow"
       href: dnn-erp-demo.md
-
-- name: Data, Language & AI
-  items:
     - name: Storage & Integrations
       href: dnn-storage-options.md
     - name: Multi-language
@@ -57,8 +42,17 @@
       href: dnn-ai-configuration.md
     - name: AI Prompts for Form Design
       href: dnn-ai-prompts.md
-
-- name: Programming (SDK)
+- name: DNN specifics
+  items:
+    - name: Module Setup — Dashboard, Windowed & Full Screen
+      href: dnn-module-setup.md
+    - name: Read & Write a SQL Table
+      href: dnn-sql-table.md
+    - name: Cascade-SQL Dropdowns
+      href: cascade-sql-dropdowns.md
+    - name: Display Submissions with Razor
+      href: dnn-razor-display-submissions.md
+- name: Programming
   items:
     - name: Overview
       href: overview.md
@@ -76,7 +70,7 @@
       href: file-download.md
     - name: Consumer — Oqtane
       href: oqtane-consumer.md
-    - name: DNN Razor Host
+    - name: Consumer — DNN Razor Host
       href: dnn-razor-host.md
     - name: Razor Host Examples
       href: razor-host-examples.md

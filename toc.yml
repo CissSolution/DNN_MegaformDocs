@@ -1,4 +1,5 @@
 - name: Home
   href: index.md
-- name: Articles
-  href: articles/toc.yml
+- name: Guides
+  href: articles/
+  homepage: articles/dnn-creating-forms.md

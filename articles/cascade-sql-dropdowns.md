@@ -4,38 +4,43 @@ Build dependent dropdowns whose options come from a SQL table, where selecting a
 value in the **parent** dropdown filters the **child** dropdown — for example
 **Country → State → City**.
 
-Everything below was built and **live-verified** on a DNN 10.3 site
-(`DNN10322_MegaQA110`) against three real demo tables.
+The whole thing is configured on ordinary `Select` fields in the Form Builder — no code.
+The capture below shows it running on a live DNN 10.3 form: pick a country and the state list
+refills, pick a state and the city list refills.
+
+![Cascade dropdowns filtering Country → State → City on a live DNN form](../images/dnn-cascade-sql.gif)
+
+## Set it up in the builder
+
+1. Drop three **Select** fields on the form (`country`, `state`, `city`).
+2. On each, open the field's **Database** tab and switch **Options source** to **SQL**, pick the
+   **connection**, and write a one-line `SELECT id, label FROM …`.
+3. On the two child fields, set **Depends on** to the parent field and turn on **Reload on change**.
+4. In the child's SQL, reference the parent's value with a `:token` **named exactly like the parent
+   field key** (`:country`, `:state`).
+
+That's the entire recipe — the sections below show the backing data and the one field that carries
+the dependency.
 
 ## The data
 
-Three tables in the site database (`DashboardDatabase`):
+Three small lookup tables in the site database (`DashboardDatabase`):
 
 ```sql
 CREATE TABLE dbo.MFDemo_Country (Id INT PRIMARY KEY, Name NVARCHAR(80));
 CREATE TABLE dbo.MFDemo_State   (Id INT PRIMARY KEY, CountryId INT, Name NVARCHAR(80));
 CREATE TABLE dbo.MFDemo_City    (Id INT PRIMARY KEY, StateId INT,  Name NVARCHAR(80));
--- e.g. Vietnam(1) → Ha Noi(11) → Hoan Kiem(101), Cau Giay(102) …
+-- e.g. Canada(1) → Ontario(11) → Toronto(101), Ottawa(102) …
 ```
 
-## The three fields
+The first column of each `SELECT` is the option **value**, the second is the **label**.
 
-A cascading SQL dropdown is a normal `Select` field whose **`properties`** bag
-carries the SQL config. The child names its parent in `optionsDependsOn`, and the
-parent's value is bound into the child's SQL via a `:token` **whose name equals the
-parent field key**.
+## The child field carries the dependency
 
-```json
-{
-  "key": "country", "type": "Select", "label": "Country", "required": true,
-  "options": [{ "value": "", "label": "-- select country --" }],
-  "properties": {
-    "optionsSource": "sql",
-    "optionsConnectionKey": "DashboardDatabase",
-    "optionsSql": "SELECT Id, Name FROM dbo.MFDemo_Country ORDER BY Name"
-  }
-}
-```
+The parent (`country`) is a plain SQL Select — `optionsSource:"sql"` with a `SELECT … FROM
+MFDemo_Country`, no dependency. The interesting one is the **child**: it names its parent in
+`optionsDependsOn` and binds the parent's value into its SQL with the matching `:token`:
+
 ```json
 {
   "key": "state", "type": "Select", "label": "State / Province", "required": true,
@@ -49,55 +54,19 @@ parent field key**.
   }
 }
 ```
-```json
-{
-  "key": "city", "type": "Select", "label": "City", "required": true,
-  "options": [{ "value": "", "label": "-- pick a state first --" }],
-  "properties": {
-    "optionsSource": "sql",
-    "optionsConnectionKey": "DashboardDatabase",
-    "optionsSql": "SELECT Id, Name FROM dbo.MFDemo_City WHERE StateId = :state ORDER BY Name",
-    "optionsDependsOn": ["state"],
-    "optionsReloadOnChange": true
-  }
-}
-```
 
-The first column of each `SELECT` is the option **value**, the second is the **label**.
+`city` follows the same shape one level down: `optionsDependsOn:["state"]` and `WHERE StateId = :state`.
 
-## How it wires together
+## How the filtering works
 
-- Each dropdown with `optionsSource:"sql"` is loaded from
-  `GET /DesktopModules/MegaForm/API/Submit/FieldOptions?formId={N}&fieldKey={key}`
-  (anonymous — the public renderer calls it).
-- When a **parent** changes, the renderer re-fetches the child and appends the
-  parent's value as `&__p__<parentKey>=<value>`. The server strips `__p__`, binds
-  it as the SQL parameter `@<parentKey>`, and runs the child's `optionsSql`.
-- So `:country` in the state SQL is filled by `&__p__country=…`, and `:state` in
-  the city SQL by `&__p__state=…`.
-
-## Verified live
-
-Hitting the endpoint directly on the DNN site (form #34) proves the filtering:
-
-```
-GET …/Submit/FieldOptions?formId=34&fieldKey=country
-→ [{"Value":"3","Label":"Japan"},{"Value":"2","Label":"United States"},{"Value":"1","Label":"Vietnam"}]
-
-GET …/Submit/FieldOptions?formId=34&fieldKey=state&__p__country=1     (Vietnam)
-→ [{"Value":"13","Label":"Da Nang"},{"Value":"11","Label":"Ha Noi"},{"Value":"12","Label":"Ho Chi Minh"}]
-
-GET …/Submit/FieldOptions?formId=34&fieldKey=state&__p__country=2     (United States)
-→ [{"Value":"21","Label":"California"},{"Value":"23","Label":"New York"},{"Value":"22","Label":"Texas"}]
-
-GET …/Submit/FieldOptions?formId=34&fieldKey=city&__p__state=21       (California)
-→ [{"Value":"201","Label":"Los Angeles"},{"Value":"202","Label":"San Francisco"}]
-
-GET …/Submit/FieldOptions?formId=34&fieldKey=state                    (no parent)
-→ []
-```
-
-![Cascade dropdowns filtering Country → State → City on a live DNN form](../images/dnn-cascade-sql.gif)
+- Each SQL-backed dropdown is loaded from
+  `GET /DesktopModules/MegaForm/API/Submit/FieldOptions?formId={N}&fieldKey={key}` (anonymous — the
+  public renderer calls it).
+- When a **parent** changes, the renderer re-fetches the child and appends the parent's value as
+  `&__p__<parentKey>=<value>`. The server strips `__p__`, binds it as SQL parameter `@<parentKey>`,
+  and runs the child's `optionsSql`. So `:country` is filled by `&__p__country=…` and `:state` by
+  `&__p__state=…`. Before a parent is chosen the token binds to `NULL`, so the child is empty by
+  design.
 
 ## ⭐ Gotchas (each caused a real silent failure)
 
@@ -106,8 +75,6 @@ GET …/Submit/FieldOptions?formId=34&fieldKey=state                    (no pare
   child returns an **empty list, silently** — no error.
 - **Missing `optionsSource:"sql"`** (or a missing `optionsConnectionKey`) also returns an
   empty list silently. Set both.
-- Before a parent is chosen, the child's `:token` binds to `NULL`, so the child is empty
-  by design (`state` with no `country` returns `[]` above) — that is correct, not a bug.
 - `optionsConnectionKey` empty falls back to `DashboardDatabase` (the site DB). To read
   another database, register it first (Database Settings) and use its key.
 - Inline `optionsSql` is **SELECT-only** — DML / `;` / comments are rejected. Results are
