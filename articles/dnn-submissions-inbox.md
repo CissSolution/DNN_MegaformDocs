@@ -10,7 +10,7 @@ The Submissions section opens on a per-form overview (KPIs + a table of forms wi
 completion and trends), and clicking a form drills into its **grid** — every submission as a
 row, with the form's own fields as columns:
 
-![Submissions on DNN: the forms overview, then drilling into the Transaction form's grid — rows with the form's own columns](../images/dnn-11-submissions.gif)
+![Submissions on DNN: a form's submissions grid — the form's own columns, status counts, live search and opening a row's detail](../images/dnn-11-submissions.gif)
 
 From the grid you can open any record's detail sheet (values, files, workflow history), change
 status, print an A4 document of one submission, export CSV, connect a Google Sheet, or open
