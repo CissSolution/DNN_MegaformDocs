@@ -1,0 +1,86 @@
+- name: Getting Started on DNN
+  items:
+    - name: From a Blank Page to a Working Form
+      href: dnn-add-to-page.md
+    - name: Module Setup — Dashboard, Windowed & Full Screen
+      href: dnn-module-setup.md
+    - name: Read & Write a SQL Table
+      href: dnn-sql-table.md
+    - name: Cascade-SQL Dropdowns
+      href: cascade-sql-dropdowns.md
+    - name: Display Submissions with Razor
+      href: dnn-razor-display-submissions.md
+
+- name: Building Forms on DNN
+  items:
+    - name: Creating Forms
+      href: dnn-creating-forms.md
+    - name: Form Templates
+      href: dnn-form-templates.md
+    - name: Form Builder
+      href: dnn-form-builder.md
+    - name: Field Permissions
+      href: dnn-field-permissions.md
+    - name: Controls & Widgets
+      href: dnn-widgets.md
+    - name: Drag & Drop Layout
+      href: dnn-drag-drop-layout.md
+    - name: Module Settings & Theme
+      href: dnn-settings-theme.md
+
+- name: Submissions & Workflow
+  items:
+    - name: After Submission
+      href: dnn-after-submission.md
+    - name: Submissions & My Inbox
+      href: dnn-submissions-inbox.md
+    - name: Submissions Grid — Filters at Scale
+      href: dnn-submissions-grid.md
+    - name: Workflow
+      href: dnn-workflow.md
+    - name: Approval Workflows & Inbox
+      href: dnn-workflow-approvals.md
+    - name: Workflow Library
+      href: dnn-workflow-library.md
+    - name: End-to-End Demo — ERP Flow
+      href: dnn-erp-demo.md
+
+- name: Data, Language & AI
+  items:
+    - name: Storage & Integrations
+      href: dnn-storage-options.md
+    - name: Multi-language
+      href: dnn-multi-language.md
+    - name: AI Form Designer
+      href: dnn-ai-form-designer.md
+    - name: Configuring the AI Assistant
+      href: dnn-ai-configuration.md
+    - name: AI Prompts for Form Design
+      href: dnn-ai-prompts.md
+
+- name: Programming (SDK)
+  items:
+    - name: Overview
+      href: overview.md
+    - name: Installation
+      href: installation.md
+    - name: Standalone Host
+      href: standalone-host.md
+    - name: Quick Start
+      href: quickstart.md
+    - name: SDK Reference
+      href: sdk-reference.md
+    - name: Reading Data
+      href: reading-data.md
+    - name: File Download
+      href: file-download.md
+    - name: Consumer — Oqtane
+      href: oqtane-consumer.md
+    - name: DNN Razor Host
+      href: dnn-razor-host.md
+    - name: Razor Host Examples
+      href: razor-host-examples.md
+    - name: Template JSON Reference
+      href: form-template-json.md
+    - name: API Stability
+      href: api-stability.md

@@ -1,0 +1,25 @@
+{
+  "build": {
+    "content": [
+      { "files": [ "articles/**.md", "articles/**/toc.yml", "toc.yml", "*.md" ] }
+    ],
+    "resource": [
+      { "files": [ "images/**" ] }
+    ],
+    "output": "_site",
+    "template": [ "default", "modern" ],
+    "globalMetadata": {
+      "_appName": "MegaForm for DNN",
+      "_appTitle": "MegaForm DNN Documentation",
+      "_appFooter": "MegaForm on DNN (DotNetNuke) — forms, submissions, SQL & Razor. © 2026 MegaForm.",
+      "_enableSearch": true,
+      "_disableContribution": true,
+      "pdf": false
+    },
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "postProcessors": [],
+    "keepFileLink": false,
+    "disableGitFeatures": false
+  }
+}
