@@ -34,6 +34,19 @@ Everything the admin overlay offers is here: Form Builder, Submissions, My Inbox
 Form Management, Configuration, Languages and Settings — see
 [Submissions & My Inbox](dnn-submissions-inbox.md) and [Creating Forms](dnn-creating-forms.md).
 
+### Windowed ⇄ Full Screen
+
+The dashboard runs inside the module's pane by default (**Windowed**) — the DNN page
+header, menu and skin stay visible around it. For more working room, use the
+**Full Screen** toggle in the dashboard's top bar: the admin surface expands to fill the
+whole browser viewport (page chrome hidden), which is the comfortable mode for the Form
+Builder and the submissions grid. Toggle back to **Windowed** to see the module in the
+context of its DNN page again. The choice is per-user and is remembered, so each staff
+member gets the working style they prefer without changing the page for anyone else.
+
+> Tip: reserve the dashboard page for staff with DNN **page-view permissions** for your
+> admin role only — the dashboard exposes every form and submission on the portal.
+
 ## 3. An inbox page for approvers
 
 Same trick with **My Inbox** mode: a page whose module shows each signed-in user THEIR
