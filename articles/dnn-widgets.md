@@ -16,7 +16,7 @@ geolocation and more. Same click-to-add as any field.
 | **Calculator** | Live computed values from other fields. |
 | **CAPTCHA** | Bot protection (alongside the built-in honeypot + spam scoring). |
 | **Content Slider** | Marketing-style slides inside or around the form. |
-| **Data Grid (Master-Detail) / Data Repeater / Grid Repeater / Infinite List** | Read-only, paged views over SQL you configure — the building blocks of the [ERP demo's report page](dnn-erp-demo.md). |
+| **Data Grid (Master-Detail) / Data Repeater / Grid Repeater / Infinite List** | Read-only, paged views over SQL you configure — the building blocks of the report page. |
 | **Draw on Image / Signature** | Annotate an image, capture a signature. |
 | **Dynamic Label** | Text that recomputes from live SQL or form values. |
 | **Geolocation** | Capture the submitter's location (with consent). |

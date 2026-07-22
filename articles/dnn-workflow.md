@@ -26,7 +26,7 @@ A `User Task` creates inbox tasks for its assignees; gateways route on field val
 (*amount > 5000 → manager approval*); DB tasks write only through parameterized statements on
 allow-listed connections. The ERP demo chains it end-to-end: transaction submitted →
 approval → **invoice row inserted automatically** — see
-[End-to-End Demo: ERP Flow](dnn-erp-demo.md).
+end-to-end workflow demo.
 
 Prefer not to draw from scratch? Attach a ready flow from the
 [Workflow Library](dnn-workflow-library.md), or let the wizard's Workflow step scaffold one.

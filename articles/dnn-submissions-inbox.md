@@ -14,7 +14,7 @@ row, with the form's own fields as columns:
 
 From the grid you can open any record's detail sheet (values, files, workflow history), change
 status, print an A4 document of one submission, export CSV, connect a Google Sheet, or open
-[Reports](dnn-erp-demo.md). Filtering at scale gets its own page —
+Reports. Filtering at scale gets its own page —
 [Submissions Grid — Filters at Scale](dnn-submissions-grid.md).
 
 ## My Inbox

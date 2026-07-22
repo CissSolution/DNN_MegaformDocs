@@ -39,4 +39,4 @@ Connection strings live server-side under named keys; the client only ever sends
 and only allow-listed keys resolve. Reads are capped and paged in SQL; writes go through
 parameterized statements. User-configured outbound URLs (webhooks) pass an SSRF guard. That's
 what makes it safe to point forms at a real ERP database — as the
-[end-to-end demo](dnn-erp-demo.md) does.
+end-to-end demo does.

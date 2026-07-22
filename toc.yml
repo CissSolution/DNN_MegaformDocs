@@ -1,5 +1,8 @@
-- name: Home
+- name: Introduction
   href: index.md
 - name: Guides
   href: articles/
   homepage: articles/dnn-creating-forms.md
+- name: Programming (SDK)
+  href: programming/
+  homepage: programming/overview.md

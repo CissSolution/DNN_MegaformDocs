@@ -4,7 +4,7 @@ Describe the change; watch it land on the canvas. The **✨ AI Designer** (build
 opens a chat panel whose instructions are applied **live to the form you're editing** — the
 recording below asks for a rating field and gets it, applied, in one round trip:
 
-![The AI Designer on DNN: the chat panel opens ("Beary" assistant), the request — add a star rating field named "Overall satisfaction" — is sent, and the field appears on the canvas](../images/dnn-19-ai-designer.gif)
+![The AI Designer on DNN modifying a premium form: the request — add a "Special Requests" field — is sent, the assistant confirms it applied the change live to the canvas, and the updated premium form is what visitors fill in](../images/dnn-19-ai-designer.gif)
 
 ## What it can do
 

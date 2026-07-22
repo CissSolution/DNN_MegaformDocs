@@ -5,8 +5,8 @@ views â€” a **Card grid**, a **ListView / table**, and a **stat-tile summary** â
 from the same submission query. Every snippet below is a complete DNN **Razor Host**
 script you can paste and run.
 
-> These build on the SDK read path documented in [DNN Razor Host](dnn-razor-host.md)
-> and [Reading Data](reading-data.md). The `IMegaFormClient` read surface was
+> These build on the SDK read path documented in [DNN Razor Host](../programming/dnn-razor-host.md)
+> and [Reading Data](../programming/reading-data.md). The `IMegaFormClient` read surface was
 > live-verified on a DNN 10 site (form **#1267**, 204 submissions).
 
 ## The shared helper
