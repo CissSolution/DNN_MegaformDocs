@@ -66,3 +66,8 @@ hero — useful when the form doubles as a landing page.
   Both are written back into the form.
 - **Keep the layout, change the words.** The skin's CSS lives in the template, so editing
   content never rewrites it — a reworded form stays pixel-consistent with the original design.
+
+The full round-trip — collapse the Presets rail so the hero renders, pick a new hero image from
+the library, retype the headline inline, then **Save** — looks like this:
+
+![Editing a premium skin's hero in the DNN builder: collapsing the Presets rail reveals the desktop hero, Change image opens the image library, a new hero photo is applied and the headline is retyped to "Summer Exchange 2027", with the Save pill counting the pending edits](../images/dnn-hero-edit.gif)
