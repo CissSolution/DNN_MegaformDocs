@@ -10,13 +10,16 @@ your own database.
 
 ## A form module doesn't look like a form builder
 
-A MegaForm module should look like a designed page, not like the builder UI. The templates below
-ship in the box and are rendered live on the DNN QA site — premium themes with multi-step chips,
-hero panels, cards and styled inputs included.
+A MegaForm module should look like a designed page, not like the builder UI. Every screenshot below
+is a **real DNN page on a live DNN 10.3 portal** — same skin, same menu, same footer — with the
+MegaForm module dropped into the right-hand pane of a two-column page and marketing copy in the
+left one.
 
-![Outback Station Stay booking on DNN — multi-step premium theme](images/dnn-gallery-outback.png)
+![Outback Station Stay booking as a MegaForm module in the right pane of a two-column DNN page](images/dnn-gallery-outback.png)
 
-![EuroYouth mobility application on DNN](images/dnn-gallery-youth.png)
+![EuroYouth mobility application running as a DNN module](images/dnn-gallery-youth.png)
+
+![Christmas community sign-up on a DNN page — premium multi-step design](images/dnn-gallery-christmas.png)
 
 ## Dozens more designs — free from the online gallery
 
@@ -37,8 +40,8 @@ Walk-through with animations: [Download a Design, Remix it with AI](articles/dnn
 
 ## More gallery templates
 
-These full-form screenshots show different layout styles from the same gallery: tabbed account
-setup, health intake, onboarding flows, travel programmes and event registration.
+Different layout styles from the same gallery — again, each one photographed on a live DNN page:
+tabbed account setup, health intake, onboarding flows, travel programmes and event registration.
 
 ![Wellness & patient intake on DNN](images/dnn-gallery-wellness.png)
 
