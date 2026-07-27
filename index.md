@@ -18,7 +18,20 @@ hero panels, cards and styled inputs included.
 
 ![EuroYouth mobility application on DNN](images/dnn-gallery-youth.png)
 
-![Contact form with map on DNN](images/dnn-gallery-contact-map.png)
+## Dozens more designs — free from the online gallery
+
+Buying the module includes the **online template gallery**: a hosted repository of premium,
+ready-to-use designs you can download **at no extra cost, as often as you like**. New designs are
+added there over time, so the catalog keeps growing after your purchase.
+
+In the builder, choose **New Form → Template Gallery → Online gallery**, preview a design, and one
+click installs it into your portal (the design's artwork comes with it). Everything is downloaded
+and verified server-side by your own DNN install.
+
+![The online template gallery inside the builder: dozens of premium designs available to install](images/dnn-online-gallery.png)
+
+> The online gallery is a licensed feature: trial installs may browse and preview the whole catalog,
+> and a purchased module installs from it without limits.
 
 ## More gallery templates
 

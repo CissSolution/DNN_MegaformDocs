@@ -59,7 +59,7 @@ a mistyped query cannot drag a million rows into a public form.
 ![A purchase-request form on DNN: choosing Region → Country reloads the Store and Vendor dropdowns from the CustomerErp database](../images/dnn-erp-cascade.gif)
 
 The chain re-filters as you go: pick *Europe → Germany* and only the two German stores and vendors
-remain; switch to *Asia-Pacific → Vietnam* and the same fields reload from the ERP.
+remain; switch to *Americas → Canada* and the same fields reload from the ERP.
 
 ![The finished purchase request with Store and Vendor narrowed to the chosen country](../images/dnn-erp-cascade-result.png)
 
