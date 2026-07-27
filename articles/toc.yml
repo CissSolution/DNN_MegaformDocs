@@ -38,10 +38,14 @@
       href: dnn-workflow-library.md
     - name: Storage & Integrations
       href: dnn-storage-options.md
+    - name: Connect a Second SQL Database
+      href: dnn-database-connections.md
     - name: Read & Write a SQL Table
       href: dnn-sql-table.md
     - name: Cascade-SQL Dropdowns
       href: cascade-sql-dropdowns.md
+    - name: AI Forms from a SQL Table
+      href: dnn-ai-sql-table-form.md
     - name: Multi-language
       href: dnn-multi-language.md
     - name: AI Form Designer
