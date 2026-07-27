@@ -33,6 +33,8 @@ and verified server-side by your own DNN install.
 > The online gallery is a licensed feature: trial installs may browse and preview the whole catalog,
 > and a purchased module installs from it without limits.
 
+Walk-through with animations: [Download a Design, Remix it with AI](articles/dnn-online-template-ai-remix.md).
+
 ## More gallery templates
 
 These full-form screenshots show different layout styles from the same gallery: tabbed account

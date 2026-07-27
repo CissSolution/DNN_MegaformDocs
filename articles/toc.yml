@@ -10,6 +10,8 @@
       href: dnn-ai-create-form.md
     - name: Form Templates
       href: dnn-form-templates.md
+    - name: Download a Design, Remix it with AI
+      href: dnn-online-template-ai-remix.md
     - name: Form Builder
       href: dnn-form-builder.md
     - name: Field Permissions
