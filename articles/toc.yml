@@ -2,6 +2,8 @@
   items:
     - name: From a Blank Page to a Working Form
       href: dnn-add-to-page.md
+    - name: Module Setup — Dashboard, Windowed & Full Screen
+      href: dnn-module-setup.md
     - name: Creating Forms
       href: dnn-creating-forms.md
     - name: Create a Form with AI
@@ -26,6 +28,8 @@
       href: dnn-submissions-inbox.md
     - name: Submissions Grid — Filters at Scale
       href: dnn-submissions-grid.md
+    - name: Display Submissions with Razor
+      href: dnn-razor-display-submissions.md
     - name: Workflow
       href: dnn-workflow.md
     - name: Approval Workflows & Inbox
@@ -34,6 +38,10 @@
       href: dnn-workflow-library.md
     - name: Storage & Integrations
       href: dnn-storage-options.md
+    - name: Read & Write a SQL Table
+      href: dnn-sql-table.md
+    - name: Cascade-SQL Dropdowns
+      href: cascade-sql-dropdowns.md
     - name: Multi-language
       href: dnn-multi-language.md
     - name: AI Form Designer
@@ -42,13 +50,3 @@
       href: dnn-ai-configuration.md
     - name: AI Prompts for Form Design
       href: dnn-ai-prompts.md
-- name: DNN specifics
-  items:
-    - name: Module Setup — Dashboard, Windowed & Full Screen
-      href: dnn-module-setup.md
-    - name: Read & Write a SQL Table
-      href: dnn-sql-table.md
-    - name: Cascade-SQL Dropdowns
-      href: cascade-sql-dropdowns.md
-    - name: Display Submissions with Razor
-      href: dnn-razor-display-submissions.md
